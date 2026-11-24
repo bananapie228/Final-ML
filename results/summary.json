@@ -1,0 +1,10 @@
+{
+  "best_structured_by_cv": "Random Forest",
+  "best_with_text_by_cv": "Structured + TF-IDF + LR",
+  "paired_test": {
+    "only_first_correct": 808,
+    "only_second_correct": 632,
+    "exact_mcnemar_p": 3.891530676564619e-06
+  },
+  "app_model": "Structured + TF-IDF + LR"
+}

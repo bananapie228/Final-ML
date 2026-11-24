@@ -1,0 +1,11 @@
+group,model,n,macro_f1
+salary missing,Random Forest,1979,0.30933805819145244
+salary missing,Structured + TF-IDF + LR,1979,0.42375681044597563
+salary present,Random Forest,2020,0.4469791287174567
+salary present,Structured + TF-IDF + LR,2020,0.44744539395438665
+no key skills,Random Forest,870,0.3753359434200556
+no key skills,Structured + TF-IDF + LR,870,0.45641487576010453
+short description,Random Forest,1506,0.3834599457651672
+short description,Structured + TF-IDF + LR,1506,0.44810011225306534
+long description,Random Forest,1201,0.32846810119928976
+long description,Structured + TF-IDF + LR,1201,0.41720704085259974

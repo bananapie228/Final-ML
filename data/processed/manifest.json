@@ -1,0 +1,57 @@
+{
+  "source": "IEEE DataPort, IT vacancies from hh.ru 2006-2020, doi:10.21227/6naz-wb22, CC BY 4.0",
+  "source_file": "vacancies_2020.csv.gz",
+  "source_sha256": "7946dcffe3538fd0e18c5422aeb0a2b106699b2c97151ca915b450d27d15262d",
+  "seed": 42,
+  "sampling": "proportional stratified by experience_id",
+  "filters": {
+    "experience_id_in": [
+      "noExperience",
+      "between1And3",
+      "between3And6",
+      "moreThan6"
+    ],
+    "min_description_chars": 200,
+    "dedup": [
+      "id",
+      "exact description"
+    ]
+  },
+  "rows_after_filters": 587493,
+  "rows_after_dedup": 390967,
+  "sample_rows": 20000,
+  "train_rows": 16001,
+  "test_rows": 3999,
+  "split": "StratifiedGroupKFold(5) first fold as test, grouped by employer_id",
+  "train_employers": 8256,
+  "test_employers": 2060,
+  "train_classes": {
+    "between1And3": 8362,
+    "between3And6": 4489,
+    "noExperience": 2702,
+    "moreThan6": 448
+  },
+  "test_classes": {
+    "between1And3": 2090,
+    "between3And6": 1122,
+    "noExperience": 675,
+    "moreThan6": 112
+  },
+  "population_classes": {
+    "between1And3": 204326,
+    "between3And6": 109684,
+    "noExperience": 66008,
+    "moreThan6": 10949
+  },
+  "sample_classes": {
+    "between1And3": 10452,
+    "between3And6": 5611,
+    "noExperience": 3377,
+    "moreThan6": 560
+  },
+  "files": {
+    "data/processed/vacancies_sample.csv.gz": "b05e2ac98787f59d0dad9abb3deb12b158ce6a4273a9afa7231893e0d3a21775",
+    "data/processed/train_ids.csv": "5e93e01c7613fcb66e2a95721760694b3233b9c08e36b1851519c6979627f635",
+    "data/processed/test_ids.csv": "2efaa9e8c2d8dd1c61a07645a14acc02ad2486678f45b7d59b21da678cbcf7fc"
+  }
+}

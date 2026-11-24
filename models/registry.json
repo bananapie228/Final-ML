@@ -1,0 +1,102 @@
+{
+  "models": {
+    "Dummy": {
+      "file": "dummy.joblib",
+      "kind": "structured",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.17161269891403333,
+      "cv_std": 1.8742943796670415e-05,
+      "params": {}
+    },
+    "Logistic Regression": {
+      "file": "logistic_regression.joblib",
+      "kind": "structured",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.32564412159330713,
+      "cv_std": 0.009172369077732612,
+      "params": {
+        "model__C": 10,
+        "model__class_weight": null
+      }
+    },
+    "Random Forest": {
+      "file": "random_forest.joblib",
+      "kind": "structured",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.3763000671916614,
+      "cv_std": 0.022587787638759228,
+      "params": {
+        "model__class_weight": "balanced_subsample",
+        "model__max_depth": 20,
+        "model__min_samples_leaf": 1
+      }
+    },
+    "Boosting": {
+      "file": "boosting.joblib",
+      "kind": "structured",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.3584460269765894,
+      "cv_std": 0.020401947672882115,
+      "params": {
+        "model__class_weight": "balanced",
+        "model__l2_regularization": 1,
+        "model__learning_rate": 0.1,
+        "model__max_leaf_nodes": 31
+      }
+    },
+    "TF-IDF + LR": {
+      "file": "tf_idf_lr.joblib",
+      "kind": "tfidf",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.4257756514166167,
+      "cv_std": 0.018632485252538973,
+      "params": {
+        "model__C": 1,
+        "model__class_weight": "balanced"
+      }
+    },
+    "Structured + TF-IDF + LR": {
+      "file": "structured_tf_idf_lr.joblib",
+      "kind": "structured+tfidf",
+      "needs_embeddings": false,
+      "text_encoder": null,
+      "cv_mean": 0.4351047895465391,
+      "cv_std": 0.012790622229571277,
+      "params": {
+        "model__C": 1,
+        "model__class_weight": "balanced"
+      }
+    },
+    "rubert-tiny2 + LR": {
+      "file": "rubert_tiny2_lr.joblib",
+      "kind": "embed",
+      "needs_embeddings": true,
+      "text_encoder": "cointegrated/rubert-tiny2",
+      "cv_mean": 0.34812834227539124,
+      "cv_std": 0.015757603561166778,
+      "params": {
+        "model__C": 10,
+        "model__class_weight": null
+      }
+    },
+    "Structured + rubert-tiny2 + Boosting": {
+      "file": "structured_rubert_tiny2_boosting.joblib",
+      "kind": "structured+embed",
+      "needs_embeddings": true,
+      "text_encoder": "cointegrated/rubert-tiny2",
+      "cv_mean": 0.4059774551420877,
+      "cv_std": 0.01802249740613579,
+      "params": {
+        "model__class_weight": "balanced",
+        "model__learning_rate": 0.05,
+        "model__max_leaf_nodes": 15
+      }
+    }
+  },
+  "app_model": "Structured + TF-IDF + LR"
+}
